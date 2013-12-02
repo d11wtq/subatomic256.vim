@@ -2,8 +2,8 @@
 
 "" Copyright (c) 2013 Chris Corbyn
 ""
-"" Author: Chris Corbyn <chris@w3style.co.uk>
-"" URL: https://github.com/d11wtq/subatomic256.vim
+"" Author:  Chris Corbyn <chris@w3style.co.uk>
+"" URL:     https://github.com/d11wtq/subatomic256.vim
 "" Version: 1.0
 ""
 "" This file is free software: you can redistribute it and/or modify
@@ -21,8 +21,12 @@
 
 "" Avoid repeating colors by referring to them by name
 fu! s:Subatomic256Highlight(group, where, name, decoration, colors)
-  exe 'hi ' . a:group . ' gui' .   a:where . '=' . a:colors[a:name][0] . ' gui=' .   a:decoration
-  exe 'hi ' . a:group . ' cterm' . a:where . '=' . a:colors[a:name][1] . ' cterm=' . a:decoration
+  exe 'hi ' . a:group .
+        \ ' gui' . a:where . '=' . a:colors[a:name][0] .
+        \ ' gui=' . a:decoration
+  exe 'hi ' . a:group .
+        \ ' cterm' . a:where . '=' . a:colors[a:name][1] .
+        \ ' cterm=' . a:decoration
 endf
 
 "" Keep everything under a function, so we can write cleaner code.
@@ -35,7 +39,7 @@ fu! s:Subatomic256Apply()
 
   "" all colors
   let colors = {
-        \ 'midnight':          [ '#262626', 235 ],
+        \ 'midnight':          [ '#1c1c1c', 234 ],
         \ 'midnight-1':        [ '#5f5f87', 60  ],
         \ 'midnight-2':        [ '#5f5f87', 60  ],
         \ 'midnight-3':        [ '#5f5f87', 60  ],
@@ -43,22 +47,22 @@ fu! s:Subatomic256Apply()
         \ 'victory-blue':      [ '#87afaf', 109 ],
         \ 'victory-blue+1':    [ '#87afd7', 110 ],
         \ 'jungle-green':      [ '#afd75f', 149 ],
-        \ 'undergrowth-green': '#87af5f',
+        \ 'undergrowth-green': [ '#87af5f', 107 ],
         \ 'deep-gold':         [ '#ffaf00', 214 ],
-        \ 'axiomatic-purple':  '#af5faf',
-        \ 'brick-red':         '#d7875f',
-        \ 'piggy-pink':        '#ffd7d7',
+        \ 'axiomatic-purple':  [ '#af5faf', 177 ],
+        \ 'brick-red':         [ '#d7875f', 208 ],
+        \ 'piggy-pink':        [ '#ffd7d7', 218 ],
         \ 'relaxed-white':     [ '#d7d7d7', 188 ],
-        \ 'cold-mud':          '#d7afaf',
+        \ 'cold-mud':          [ '#d7afaf', 224 ],
         \
         \ 'full-white':        [ '#ffffff', 231 ],
-        \ 'full-black':        '#000000',
-        \ 'full-red':          '#ff0000',
-        \ 'full-green':        '#00ff00',
-        \ 'full-blue':         '#0000ff',
-        \ 'full-yellow':       '#ffff00',
-        \ 'full-magenta':      '#ff00ff',
-        \ 'full-cyan':         '#00ffff',
+        \ 'full-black':        [ '#000000', 232 ],
+        \ 'full-red':          [ '#ff0000', 160 ],
+        \ 'full-green':        [ '#00ff00', 40  ],
+        \ 'full-blue':         [ '#0000ff', 19  ],
+        \ 'full-yellow':       [ '#ffff00', 220 ],
+        \ 'full-magenta':      [ '#ff00ff', 165 ],
+        \ 'full-cyan':         [ '#00ffff', 45  ],
         \ }
 
   " bold = keyword, constant, operator
@@ -82,19 +86,25 @@ fu! s:Subatomic256Apply()
         \ [ 'Visual',       'bg', 'mystic-blue',    'none' ],
         \ [ 'Visual',       'fg', 'full-white',     'none' ],
         \ [ 'Label',        'fg', 'deep-gold',      'bold' ],
+        \ [ 'Define',       'fg', 'deep-gold',      'bold' ],
+        \ [ 'Macro',        'fg', 'victory-blue',   'bold' ],
         \ [ 'Conditional',  'fg', 'deep-gold',      'bold' ],
         \ [ 'vimCommand',   'fg', 'deep-gold',      'bold' ],
         \ [ 'Title',        'fg', 'deep-gold',      'bold' ],
         \ [ 'Special',      'fg', 'deep-gold',      'bold' ],
         \ [ 'Statement',    'fg', 'relaxed-white',  'bold' ],
-        \ [ 'Define',       'fg', 'deep-gold',      'bold' ],
-        \ [ 'Macro',        'fg', 'victory-blue',   'bold' ],
         \ [ 'PreProc',      'fg', 'victory-blue',   'none' ],
         \ [ 'LineNr',       'fg', 'relaxed-white',  'none' ],
         \ ]
 
   for group in groups
-    call s:Subatomic256Highlight(group[0], group[1], group[2], group[3], colors)
+    call s:Subatomic256Highlight(
+          \ group[0],
+          \ group[1],
+          \ group[2],
+          \ group[3],
+          \ colors
+          \ )
   endfor
 endf
 
