@@ -4,7 +4,7 @@
 ""
 "" Author:  Chris Corbyn <chris@w3style.co.uk>
 "" URL:     https://github.com/d11wtq/subatomic256.vim
-"" Version: 1.0
+"" Version: 1.1
 ""
 "" This file is free software: you can redistribute it and/or modify
 "" it under the terms of the GNU General Public License as published
@@ -49,6 +49,7 @@ fu! s:Subatomic256Apply()
         \ 'midnight-3':        [ '#5f5f87', 233 ],
         \ 'midnight-4':        [ '#1c1c1c', 234 ],
         \ 'mystic-blue':       [ '#5f5f87', 60  ],
+        \ 'mystic-blue+1':     [ '#5f5f87', 60  ],
         \ 'victory-blue':      [ '#87afaf', 109 ],
         \ 'victory-blue+1':    [ '#87afd7', 110 ],
         \ 'jungle-green':      [ '#afd75f', 149 ],
@@ -72,15 +73,16 @@ fu! s:Subatomic256Apply()
 
   "" light background colors
   let lightcolors = {
-        \ 'midnight':          [ '#d7d7d7', 188 ],
+        \ 'midnight':          [ '#d7d7d7', 230 ],
         \ 'midnight-1':        [ '#5f5f87', 61  ],
         \ 'midnight-2':        [ '#5f5f87', 240 ],
         \ 'midnight-3':        [ '#ffffff', 231 ],
-        \ 'midnight-4':        [ '#d7d7d7', 251 ],
-        \ 'mystic-blue':       [ '#5f875f', 65  ],
+        \ 'midnight-4':        [ '#d7d7d7', 228 ],
+        \ 'mystic-blue':       [ '#5f875f', 242 ],
+        \ 'mystic-blue+1':     [ '#d7d7d7', 228 ],
         \ 'victory-blue':      [ '#005fd7', 26  ],
         \ 'victory-blue+1':    [ '#005f87', 24  ],
-        \ 'jungle-green':      [ '#008700', 23  ],
+        \ 'jungle-green':      [ '#005f5f', 23  ],
         \ 'undergrowth-green': [ '#87af5f', 107 ],
         \ 'deep-gold':         [ '#d75f00', 166 ],
         \ 'axiomatic-purple':  [ '#8700af', 91  ],
@@ -153,9 +155,9 @@ fu! s:Subatomic256Apply()
         \ [ 'Search',              'fg', 'full-blue',        'bold'      ],
         \ [ 'IncSearch',           'bg', 'midnight-2',       'none'      ],
         \ [ 'IncSearch',           'fg', 'full-green',       'bold'      ],
-        \ [ 'MatchParen',          'bg', 'midnight-2',       'none'      ],
+        \ [ 'MatchParen',          'bg', 'midnight-1',       'none'      ],
         \ [ 'MatchParen',          'fg', 'full-green',       'bold'      ],
-        \ [ 'StatusLine',          'bg', 'mystic-blue',      'none'      ],
+        \ [ 'StatusLine',          'bg', 'mystic-blue+1',    'none'      ],
         \ [ 'StatusLine',          'fg', 'relaxed-white',    'bold'      ],
         \ [ 'StatusLineNC',        'bg', 'midnight-2',       'none'      ],
         \ [ 'StatusLineNC',        'fg', 'relaxed-white',    'none'      ],
@@ -166,6 +168,7 @@ fu! s:Subatomic256Apply()
         \ [ 'DefinedName',         'fg', 'relaxed-white',    'none'      ],
         \ [ 'htmlTagName',         'fg', 'relaxed-white',    'none'      ],
         \ [ 'SpecialComment',      'fg', 'axiomatic-purple', 'none'      ],
+        \ [ 'Error',               'bg', 'midnight',         'none'      ],
         \ [ 'Error',               'fg', 'piggy-pink',       'bold'      ],
         \ [ 'ErrorMsg',            'fg', 'relaxed-white',    'none'      ],
         \ [ 'WarningMsg',          'fg', 'piggy-pink',       'none'      ],
