@@ -9,7 +9,7 @@ the background *before* you set the colorscheme.
     set background=light
     colorscheme subatomic256
 
-![Subatomic256 Light](http://i.imgur.com/HnPYHhW.png)
+![Subatomic256 Light](http://i.imgur.com/x90oLNv.png)
 
     set background=dark
     colorscheme subatomic256
