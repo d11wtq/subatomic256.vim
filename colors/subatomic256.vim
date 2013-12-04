@@ -4,7 +4,7 @@
 ""
 "" Author:  Chris Corbyn <chris@w3style.co.uk>
 "" URL:     https://github.com/d11wtq/subatomic256.vim
-"" Version: 1.1
+"" Version: 1.2
 ""
 "" This file is free software: you can redistribute it and/or modify
 "" it under the terms of the GNU General Public License as published
@@ -53,7 +53,6 @@ fu! s:Subatomic256Apply()
         \ 'victory-blue':      [ '#87afaf', 109 ],
         \ 'victory-blue+1':    [ '#87afd7', 110 ],
         \ 'jungle-green':      [ '#afd75f', 149 ],
-        \ 'undergrowth-green': [ '#87af5f', 107 ],
         \ 'deep-gold':         [ '#ffaf00', 214 ],
         \ 'axiomatic-purple':  [ '#af5faf', 177 ],
         \ 'brick-red':         [ '#d7875f', 208 ],
@@ -63,12 +62,8 @@ fu! s:Subatomic256Apply()
         \
         \ 'full-white':        [ '#ffffff', 231 ],
         \ 'full-black':        [ '#000000', 232 ],
-        \ 'full-red':          [ '#ff0000', 160 ],
         \ 'full-green':        [ '#00ff00', 46  ],
         \ 'full-blue':         [ '#0000ff', 19  ],
-        \ 'full-yellow':       [ '#ffff00', 220 ],
-        \ 'full-magenta':      [ '#ff00ff', 165 ],
-        \ 'full-cyan':         [ '#00ffff', 45  ],
         \ }
 
   "" light background colors
@@ -82,9 +77,8 @@ fu! s:Subatomic256Apply()
         \ 'mystic-blue+1':     [ '#dadada', 253 ],
         \ 'victory-blue':      [ '#005fd7', 26  ],
         \ 'victory-blue+1':    [ '#005f87', 24  ],
-        \ 'jungle-green':      [ '#005f5f', 23  ],
-        \ 'undergrowth-green': [ '#87af5f', 107 ],
-        \ 'deep-gold':         [ '#d75f00', 166 ],
+        \ 'jungle-green':      [ '#005f5f', 28  ],
+        \ 'deep-gold':         [ '#d75f00', 196 ],
         \ 'axiomatic-purple':  [ '#8700af', 91  ],
         \ 'brick-red':         [ '#d7875f', 160 ],
         \ 'piggy-pink':        [ '#ff00ff', 201 ],
@@ -93,12 +87,8 @@ fu! s:Subatomic256Apply()
         \
         \ 'full-white':        [ '#000000', 232 ],
         \ 'full-black':        [ '#ffffff', 231 ],
-        \ 'full-red':          [ '#ff0000', 160 ],
         \ 'full-green':        [ '#00ff00', 46  ],
         \ 'full-blue':         [ '#00ffff', 45  ],
-        \ 'full-yellow':       [ '#ffff00', 220 ],
-        \ 'full-magenta':      [ '#ff00ff', 165 ],
-        \ 'full-cyan':         [ '#00ffff', 45  ],
         \ }
 
   " pick the best color palette for the background
