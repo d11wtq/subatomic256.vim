@@ -73,13 +73,13 @@ fu! s:Subatomic256Apply()
 
   "" light background colors
   let lightcolors = {
-        \ 'midnight':          [ '#d7d7d7', 230 ],
+        \ 'midnight':          [ '#eeeeee', 255 ],
         \ 'midnight-1':        [ '#5f5f87', 61  ],
         \ 'midnight-2':        [ '#5f5f87', 240 ],
         \ 'midnight-3':        [ '#ffffff', 231 ],
-        \ 'midnight-4':        [ '#d7d7d7', 228 ],
+        \ 'midnight-4':        [ '#dadada', 253 ],
         \ 'mystic-blue':       [ '#5f875f', 242 ],
-        \ 'mystic-blue+1':     [ '#d7d7d7', 228 ],
+        \ 'mystic-blue+1':     [ '#dadada', 253 ],
         \ 'victory-blue':      [ '#005fd7', 26  ],
         \ 'victory-blue+1':    [ '#005f87', 24  ],
         \ 'jungle-green':      [ '#005f5f', 23  ],
