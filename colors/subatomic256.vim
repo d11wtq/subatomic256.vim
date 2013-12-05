@@ -19,9 +19,6 @@
 "" You should have received a copy of the GNU General Public License
 "" along with this file.  If not, see <http://www.gnu.org/licenses/>.
 
-" theme name (required)
-let colors_name = 'subatomic256'
-
 " all 256 colors available in 256 color terminals
 let palette = {
       \   0: '#000000',   1: '#cd0000',   2: '#00cd00',   3: '#cdcd00',
@@ -115,6 +112,8 @@ fu! s:Subatomic256Apply(palette)
   if exists("syntax_on")
     syntax reset
   endif
+
+  let colors_name = 'subatomic256'
 
   "" dark background colors
   let darkcolors = {
