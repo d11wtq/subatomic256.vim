@@ -113,7 +113,7 @@ fu! s:Subatomic256Apply(palette)
     syntax reset
   endif
 
-  let colors_name = 'subatomic256'
+  let g:colors_name = 'subatomic256'
 
   "" dark background colors
   let darkcolors = {
