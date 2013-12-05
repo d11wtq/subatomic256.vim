@@ -22,6 +22,10 @@
 " theme name (required)
 let colors_name = 'subatomic256'
 
+if exists("syntax_on")
+  syntax reset
+endif
+
 " all 256 colors available in 256 color terminals
 let palette = {
       \   0: '#000000',   1: '#cd0000',   2: '#00cd00',   3: '#cdcd00',
