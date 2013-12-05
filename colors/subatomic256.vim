@@ -22,10 +22,6 @@
 " theme name (required)
 let colors_name = 'subatomic256'
 
-if exists("syntax_on")
-  syntax reset
-endif
-
 " all 256 colors available in 256 color terminals
 let palette = {
       \   0: '#000000',   1: '#cd0000',   2: '#00cd00',   3: '#cdcd00',
@@ -115,6 +111,10 @@ endf
 fu! s:Subatomic256Apply(palette)
   "" reset existing colors
   hi clear
+
+  if exists("syntax_on")
+    syntax reset
+  endif
 
   "" dark background colors
   let darkcolors = {
